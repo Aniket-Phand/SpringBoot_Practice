@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import com.aniket.spring_boot_rest.model.JobPost;
 
 @Repository
-public class JobRepo {
+public interface JobRepo extends JpaRepository<JobPost,Integer> {
 
-    private final List<JobPost> jobs = new ArrayList<>(Arrays.asList(
+}
+/*  private final List<JobPost> jobs = new ArrayList<>(Arrays.asList(
             new JobPost(1, "Java Developer", "Must Have a Good In Java and Spring", 2, Arrays.asList("Java", "Spring", "SpringBoot")),
             new JobPost(2, "Frontend Developer", "Experience in building responsive web applications", 3, Arrays.asList("JavaScript", "React", "HTML", "CSS")),
             new JobPost(3, "Python Engineer", "Focus on data processing and backend automation scripting", 1, Arrays.asList("Python", "Django", "PostgreSQL")),
@@ -55,3 +57,4 @@ public class JobRepo {
         }
     }
 }
+*/
