@@ -11,6 +11,9 @@ import com.aniket.spring_boot_rest.model.JobPost;
 @Repository
 public interface JobRepo extends JpaRepository<JobPost,Integer> {
 
+    //Search by keyword
+    List<JobPost> findByPostProfileContainingOrPostDescContaining(String postProfile,String postDesc);
+
 }
 /*  private final List<JobPost> jobs = new ArrayList<>(Arrays.asList(
             new JobPost(1, "Java Developer", "Must Have a Good In Java and Spring", 2, Arrays.asList("Java", "Spring", "SpringBoot")),
