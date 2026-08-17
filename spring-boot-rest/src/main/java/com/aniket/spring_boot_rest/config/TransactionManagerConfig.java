@@ -25,7 +25,7 @@ public class TransactionManagerConfig {
                 System.out.println("Txn Logger --> Transaction Commited " + "(name = " + status.getTransactionName() + ")");
             }
 
-            //@Override
+            @Override
             protected void doRollBack(DefaultTransactionStatus status){
                 super.doRollback(status);
                 System.out.println("Txn Logger --> Transaction ROLLED BACK " + "(name = " + status.getTransactionName() + ")");
